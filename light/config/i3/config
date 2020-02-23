@@ -52,8 +52,6 @@ bindsym $mod+F1 exec "~/.Scripts/DSvolume.sh mute"
 bindsym $mod+F3 exec "~/.Scripts/DSvolume.sh up"
 bindsym $mod+F2 exec "~/.Scripts/DSvolume.sh down"
 
-# Touchpad controls
-bindsym $mod+F9 exec ~/.Scripts/DSTouTog.sh
 
 # Screen brightness controls
 bindsym $mod+F6 exec " ~/.Scripts/DSbacklight.sh up"
@@ -79,39 +77,55 @@ bindsym --release $mod+Shift+l exec --no-startup-id ~/.Scripts/DSlocker.sh
 bindsym $mod+Shift+f exec --no-startup-id ~/.Scripts/DSfani.sh
 
 # Rofi
-bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/themes/default.rasi
+bindsym $mod+o exec --no-startup-id rofi -show drun -config ~/.config/rofi/themes/default.rasi
 bindsym $mod+Tab exec --no-startup-id rofi  -show window -config ~/.config/rofi/themes/Switch.rasi
 bindsym $mod+9 exec --no-startup-id $HOME/.config/rofi/scripts/i3stratch.py
 bindsym $mod+y exec --no-startup-id $HOME/.config/rofi/scripts/Powermenu.sh
 bindsym $mod+shift+m exec --no-startup-id $HOME/.config/rofi/scripts/mpdcontrol.sh
 # rofi-calc - useful calc tool
 bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
+#Screen Print
+exec --no-startup-id fce4-clipman<br>bindsym $mod+Print exec deepin-screenshot
 
+##########################
+#
+#ScreenShortcut
+#
+##########################
 
+# cut all the screen 
+bindsym  Print exec "sh ~/.config/i3/screencut/cut_all.sh"
+# cut current window
+bindsym $mod+Print exec "sh ~/.config/i3/screencut/cut_cur.sh"
+# cut selection 
+#bindsym $mod+Shift+Print exec "sh ~/.config/i3/screencut/cut_sel.sh"
 
+bindsym $mod+Shift+Print  exec deepin-screenshot
 ##########################
 #
 #    Applications
 #
 ##########################
 # Start applications
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec konsole
 #bindsym $mod+d exec "emacsclient -c"
 
 # Start applications on specific workspaces
-assign [class="code"] $ws1
-assign [class="Emacs"] $ws1
-assign [class="irefox"] $ws2
-assign [class="Termite"] $ws3
-assign [class="Nemo"] $ws4
-assign [class="Gimp"] $ws6
-assign [class="Inkscape"] $ws6
+#assign [class="code"] $ws1
+#assign [class="Emacs"] $ws1
+#assign [class="irefox"] $ws2
+# assign [class="Termite"] $ws3
+#assign [class="Nemo"] $ws4
+#assign [class="Gimp"] $ws6
+#assign [class="Inkscape"] $ws6
 
 # Autostart applications
 #exec_always --no-startup-id flashfocus
 exec_always --no-startup-id  ~/.config/polybar/launchi3.sh
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
-exec --no-startup-id clipit 
+exec --no-startup-id clipit & fcitx
+
+exec --no-startup-id feh --bg-fill /home/codel/wallpaper/wp.jpg
 
 # Specific applications configration
 for_window [class=".*anbox.*"] floating enable
@@ -401,7 +415,7 @@ mode "$mode_gaps_inner" {
 #    status_command i3blocks -c ~/.config/i3/i3blocks.conf
 #    position bottom
 #    tray_output none
-
+#
 # tray_padding <px> [px]
 #    tray_padding 3
 
