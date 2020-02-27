@@ -1,3 +1,4 @@
+* 本仓库fork自https://github.com/aeghn/prettyi3，去除了dark版本。
 * 记录
 [20190921] 添加了文泉驿正黑斜体 (oblique), 使用 Fontforge 生成。
 
@@ -22,9 +23,5 @@
 * 预览
 ** Light
 [[https://raw.githubusercontent.com/wangzme/shareddotfiles/master/images/light.png]]
-
-
-** Dark
-[[https://raw.githubusercontent.com/wangzme/shareddotfiles/master/images/dark.png]]
 
 

@@ -7,6 +7,7 @@
 #                                             |___/ 
 #
 
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 
 ##########################
@@ -83,12 +84,11 @@ bindsym $mod+y exec --no-startup-id $HOME/.config/rofi/scripts/Powermenu.sh
 bindsym $mod+shift+m exec --no-startup-id $HOME/.config/rofi/scripts/mpdcontrol.sh
 # rofi-calc - useful calc tool
 bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort"
-#Screen Print
-exec --no-startup-id fce4-clipman<br>bindsym $mod+Print exec deepin-screenshot
+
 
 ##########################
 #
-#ScreenShortcut
+#     ScreenShortcut
 #
 ##########################
 
@@ -113,7 +113,7 @@ bindsym $mod+Return exec konsole
 #assign [class="code"] $ws1
 #assign [class="Emacs"] $ws1
 #assign [class="irefox"] $ws2
-# assign [class="Termite"] $ws3
+#assign [class="Termite"] $ws3
 #assign [class="Nemo"] $ws4
 #assign [class="Gimp"] $ws6
 #assign [class="Inkscape"] $ws6
@@ -124,7 +124,7 @@ exec_always --no-startup-id  ~/.config/polybar/launchi3.sh
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id clipit & fcitx
 
-exec --no-startup-id feh --bg-fill /home/codel/wallpaper/wp.jpg
+exec --no-startup-id feh --bg-fill ~/.config/i3/Pictures/wallpaper.jpg
 
 # Specific applications configration
 for_window [class=".*anbox.*"] floating enable
