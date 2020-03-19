@@ -113,7 +113,7 @@ bindsym $mod+Return exec konsole
 #exec_always --no-startup-id flashfocus
 # exec_always --no-startup-id  ~/.config/polybar/launchi3.sh
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
-exec --no-startup-id clipit & fcitx & konsole & google-chrome-stable & dolphin & code-insiders
+exec --no-startup-id clipit & fcitx & konsole & google-chrome-stable & dolphin
 
 exec --no-startup-id feh --bg-fill ~/config/i3/Pictures/wallpaper.jpg
 
