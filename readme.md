@@ -1,4 +1,20 @@
-**本仓库fork自[prettyi3](https://github.com/aeghn/prettyi3)，对配置文件进行了部分修改。**
+成效图：
+
+![effect_1.png](https://i.loli.net/2020/03/19/yKBnkQZIh6YpJXL.png)
+
+![effect_1.png](https://i.loli.net/2020/03/19/MBY2RG7TVcHZiXk.png)
+
+
+
+
+
+
+
+
+
+
+
+本仓库fork自[prettyi3](https://github.com/aeghn/prettyi3)，对配置文件进行了部分修改。**
 
 ## 配置简介：
 
@@ -11,7 +27,7 @@
 
 1.默认应用启动器为rofi，界面更美观，相关的内容在75至82行，使用Mod+o打开。
 
- 2.默认的终端为konsole，相关内容在配置文件的109行，使用Mod+Enter打开。
+2.默认的终端为konsole，相关内容在配置文件的109行，使用Mod+Enter打开。
 
 3.bar的工作区名称调为font-awesome（[下载地址](http://files.cnblogs.com/files/vachester/font-awesome-4.7.0.zip)），更加美观，方便辨识。下载完成解压后放到/usr/share/fonts即可（若无法使用或不愿意使用font-awesome，可以在配置文件的262行到271行进行更改）
 
@@ -31,11 +47,9 @@
 
 ​	(4).第114行是原作者调用的polybar，由于我无法安装polybar，对这一行进行了注释，并在下方的408行至438	行调用了i3bar。
 
-​	(5).Feh，一个图片查看器，但此处我们使用的是它的壁纸设置功能，具体调用在第118行。默认的壁纸为	```~/config/i3/Pictures/wallpaper.jpg```，可以按自己的需求进行更改。
+​	(5).Feh，一个图片查看器，但此处我们使用的是它的壁纸设置功能，具体调用在第118行。默认的壁纸```~/config/i3/Pictures/wallpaper.jpg```，可以按自己的需求进行更改。
 
 ​	(6).启动了fcitx输入法。
-
-
 
 ## 关于项目的安装：
 
